@@ -24,9 +24,13 @@ function renderVolume(input){
     const ltg = (0.264172*input).toFixed(3)
     const gtl = (3.78541*input).toFixed(3)
 
-    document.querySelector("#vol-el")
+    document.querySelector("#vol-el").textContent = `${input} liters = ${ltg} gallons | ${input} gallons = ${gtl} liters`
 }
 
 function renderMass(input){
     console.log("renderMass() called")
+    const ktp = (2.20462*input).toFixed(3)
+    const ptk = (0.453592*input).toFixed(3)
+
+    document.querySelector("#mass-el").textContent = `${input} kilos = ${ktp} pounds | ${input} pounds = ${ptk} kilos`
 }
